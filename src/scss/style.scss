@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Fjalla+One&family=Kdam+Thmor+Pro&family=Noto+Sans+KR:wght@100;400;700&family=Quicksand:wght@300&display=swap');
+
+
+$tablet: 1179px;
+$mp: 539px;
+
+$fontXXXL: 3.5rem;
+$fontXXL: 2rem;
+$fontXL: 1.5rem;
+$fontL: 1rem;
+$fontM: 0.875rem;
+$fontS: 0.75rem;
+
+$noto : 'Noto Sans KR';
+$poinFont : 'Comfortaa';
+$thinFont : 'Quicksand';
+
+$pointColor:#e64238;
+$mainColor:#111;
+
+//common
+@import 'common/footer';
+@import 'common/header';
+@import 'common/layout';
+@import 'common/popup';
+@import 'common/reset';
+
+//main
+@import 'main/mainImg';
+@import 'main/plist';
+@import 'main/products';
+@import 'main/text';
+@import 'main/video';
+
+//sub
+@import 'sub/department';
+@import 'sub/gallery';
+@import 'sub/location';
+@import 'sub/notice';
+@import 'sub/product';
+@import 'sub/youtube';
