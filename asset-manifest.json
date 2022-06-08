@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react_page/static/css/main.2a7450f4.css",
-    "main.js": "/react_page/static/js/main.a8102f38.js",
-    "static/media/main_img.jpg": "/react_page/static/media/main_img.f9130c0959b435484ed8.jpg",
-    "index.html": "/react_page/index.html",
-    "main.2a7450f4.css.map": "/react_page/static/css/main.2a7450f4.css.map",
-    "main.a8102f38.js.map": "/react_page/static/js/main.a8102f38.js.map"
+    "main.css": "/boramiiii/boram_reactPortfolio/static/css/main.fde79536.css",
+    "main.js": "/boramiiii/boram_reactPortfolio/static/js/main.9b03b525.js",
+    "static/media/main_img.jpg": "/boramiiii/boram_reactPortfolio/static/media/main_img.f9130c0959b435484ed8.jpg",
+    "index.html": "/boramiiii/boram_reactPortfolio/index.html",
+    "main.fde79536.css.map": "/boramiiii/boram_reactPortfolio/static/css/main.fde79536.css.map",
+    "main.9b03b525.js.map": "/boramiiii/boram_reactPortfolio/static/js/main.9b03b525.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a7450f4.css",
-    "static/js/main.a8102f38.js"
+    "static/css/main.fde79536.css",
+    "static/js/main.9b03b525.js"
   ]
 }
