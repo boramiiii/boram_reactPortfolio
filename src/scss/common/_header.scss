@@ -38,7 +38,7 @@ header{
         height: 100%;
         background-color:$pointColor;
 
-        .fa-power-off{
+        .fa-arrow-right-to-bracket{
           width: 100%;
           font-size: 25px;
           color: #fff;
@@ -63,12 +63,10 @@ header{
         a{
           display: block;
           font-family: $poinFont;
-          color: $mainColor;
+          color: #111;
           font-size: 18px;
           line-height: 100px;
           padding: 0 3.8vw;
-          color: #111;
-          
         }
         &:last-child{
           border-right: 0px;
@@ -90,11 +88,9 @@ header{
     >.inner{
       #gnb{
         background-color: transparent;
-        ul{
-          li{
-            a{
-              color: #fff;
-            }
+        li{
+          a{
+            color: #fff;
           }
         }
       }

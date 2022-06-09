@@ -1,7 +1,7 @@
 import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
+import { faSignIn } from '@fortawesome/free-solid-svg-icons';
 
 function Header({ type }) {
   const style = {
@@ -22,7 +22,7 @@ function Header({ type }) {
           </h1>
           <p>
             <Link to='/join'>
-              <FontAwesomeIcon icon={faPowerOff} />
+              <FontAwesomeIcon icon={faSignIn} />
             </Link>
           </p>
         </div>

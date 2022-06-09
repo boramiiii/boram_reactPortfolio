@@ -1,9 +1,28 @@
-import React from 'react'
+import { useEffect } from 'react';
 
-function popup() {
+function Popup({ children, setOpen }) {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    }
+  }, [])
+
+  const closeBtn = `${process.env.PUBLIC_URL}/img/close.png`;
+
+
   return (
-    <div>popup</div>
-  )
+    <aside className='pop'>
+      <div className="con">
+        {children}
+        <span className="close" onClick={() => setOpen(false)}>
+          <img src={closeBtn} alt="" />
+        </span>
+      </div>
+    </aside>
+  );
+
 }
 
-export default popup
+export default Popup;
