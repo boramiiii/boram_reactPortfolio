@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/boram_reactPortfolio/static/css/main.da01d19f.css",
+    "main.css": "/boram_reactPortfolio/static/css/main.e1301dba.css",
     "main.js": "/boram_reactPortfolio/static/js/main.93ffcf41.js",
     "static/media/main_img.jpg": "/boram_reactPortfolio/static/media/main_img.f9130c0959b435484ed8.jpg",
     "index.html": "/boram_reactPortfolio/index.html",
-    "main.da01d19f.css.map": "/boram_reactPortfolio/static/css/main.da01d19f.css.map",
+    "main.e1301dba.css.map": "/boram_reactPortfolio/static/css/main.e1301dba.css.map",
     "main.93ffcf41.js.map": "/boram_reactPortfolio/static/js/main.93ffcf41.js.map"
   },
   "entrypoints": [
-    "static/css/main.da01d19f.css",
+    "static/css/main.e1301dba.css",
     "static/js/main.93ffcf41.js"
   ]
 }
