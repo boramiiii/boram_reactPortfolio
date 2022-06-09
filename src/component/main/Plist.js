@@ -2,7 +2,7 @@ import React from 'react'
 
 function Plist() {
   return (
-    <div>Plist</div>
+    <section id='pList'>plist</section>
   )
 }
 

@@ -46,7 +46,7 @@ function App() {
 
 			<Route path='/department' component={Department} />
 			<Route path='/gallery' component={Gallery} />
-			<Route path='/location' component={Location} />
+			<Route path='/contact' component={Location} />
 			<Route path='/notice' component={Notice} />
 			<Route path='/product' component={Product} />
 			<Route path='/youtube' component={Youtube} />

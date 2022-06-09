@@ -9,11 +9,13 @@
       font-weight: 600;
       transform: rotate(90deg);
       position: absolute;
-      right: -120px;
+      right: 0;
       top: 50%;
       bottom: 50%;
       font-size: 40px;
       height: 60px;
+      opacity: 0;
+      transition: 1s;
     }
     figure{
       padding: 400px 600px 150px 100px;
@@ -21,6 +23,10 @@
       height: 100%;
       background:url(../../../public/img/department/main_img.jpg) no-repeat top/cover;
       position: relative;
+      opacity: 0;
+      transform: translateX(-200px);
+      transition: 1s;
+      transition-delay: 0s;
 
       h2{
         font-family: $poinFont;
@@ -28,18 +34,29 @@
         color: $pointColor;
         font-size: $fontXXXL;
         margin-bottom: 30px;
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: 1s;
+        transition-delay: .5s;
       }
       p{
         font-family: $noto;
         font-size: $fontL;
         color: #bbb;
         line-height: 1.6;
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: 1s;
+        transition-delay: .9s;
       }
 
       .btns{
         position: absolute;
         bottom: 0;
         right: 0;
+        opacity: 0;
+        transition: 1s;
+        transition-delay: .9s;
 
         .fa-angle-left, .fa-angle-right{
           padding: 40px;
@@ -50,8 +67,6 @@
       }
     }
   }
-  
-
   .Department{
     position: relative;
     
@@ -254,6 +269,31 @@
         
       }
       
+    }
+  }
+
+  &.on{
+    .visualWrap{
+      .visualTxt{
+        right: -120px;
+        opacity: 1;
+      }
+      figure{
+        opacity: 1;
+        transform: translateX(0);
+        h2{
+          opacity: 1;
+          transform: translateX(0);
+        }
+        p{
+          opacity: 1;
+          transform: translateX(0);
+        }
+        .btns{
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
     }
   }
 }

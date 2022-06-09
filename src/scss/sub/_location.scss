@@ -1,0 +1,256 @@
+.visualWrap{
+  width: 100%;
+  height: 90vh;
+  margin-top: 100px;
+  .visualTxt{
+    font-family: 'Fjalla One';
+    font-weight: 600;
+    transform: rotate(90deg);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    bottom: 50%;
+    font-size: 40px;
+    height: 60px;
+
+    opacity: 0;
+    transition: 1s;
+  }
+  figure{
+    width: 90%;
+    height: 100%;
+    position: relative;
+    position: relative;
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: 1s;
+    transition-delay: .3s;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1) brightness(0.8);
+    }
+    .vTxt{
+      width: 50%;
+      position: absolute;
+      bottom: 8vw;
+      left: 5vw;
+
+      h2{
+        font-family: $poinFont;
+        font-weight: 700;
+        color: $pointColor;
+        font-size: $fontXXXL;
+        margin-bottom: 30px;
+        transform: translateX(-200px);
+        opacity: 0;
+        transition: 1s;
+        transition-delay: .8s;
+      }
+      >p{
+        font-family: $noto;
+        font-size: $fontL;
+        color: #bbb;
+        line-height: 1.6;
+        transform: translateX(-200px);
+        opacity: 0;
+        transition: 1s;
+        transition-delay: 1.3s;
+      }
+    }
+    
+  }
+  &.on{
+    .visualTxt{
+      right: -120px;
+      opacity: 1;
+    }
+    figure{
+      transform: translateX(0);
+      opacity: 1;
+      .vTxt{
+        h2{
+          opacity: 1;
+          transform: translateY(0);
+        }
+        >p{
+          opacity: 1;
+          transform: translateX(0);
+        }      
+      }
+    }
+  }
+}
+
+
+.Location {
+	.inner {
+    padding: 150px 0;
+
+    .getWrap{
+      width: 100%;
+      margin-bottom: 100px;
+      &::after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      >h3{
+        width: 100%;
+        float: left;
+        font-size: $fontXXXL;
+        font-family: 'Fjalla One';
+        margin-bottom: 80px;  
+      }
+      .tel{
+        width: 50%;
+        float: left;
+        padding-top: 4vw;
+        padding-right: 40px;
+
+        h4{
+          font-size: $fontM;
+          font-family: $poinFont;
+          margin-bottom: 20px;
+          color: #666;
+        }
+        p{
+          font-size: $fontXXL;
+          font-family: $poinFont;
+          span{
+            color: $pointColor;
+            display: block;
+            margin-top: 10px;
+            font-weight: 700;
+          }
+        }
+      }
+      .con{
+        width: 50%;
+        float: right;
+        padding-left: 40px;
+        border-left: 1px solid #bbb;
+        article{
+          width: 100%;
+          margin-bottom: 20px;
+          h4{
+            font: 700 20px/1 $poinFont;
+            color: #000;
+            margin-bottom: 20px;
+          }
+          >p{
+            font: 16px/1 $poinFont;
+            color: #444;
+            margin-bottom: 10px;
+          }
+          >div{
+            width: 100%;
+            margin-top: 20px;
+            height: 20px;
+            &::after{
+              content: '';
+              display: block;
+              clear: both;
+            }
+            .icon{
+              float: left;
+              height: $fontM;
+              .fa-location-dot, .fa-circle-info{
+                color: $pointColor;
+                font-size: $fontM;
+                
+              }
+            }
+            >p{
+              float: left;
+              font: 700 14px/1 $poinFont;
+              color: $pointColor;
+              line-height: 20px;
+              margin-left: 10px;
+              margin-bottom: 0;
+              padding: 2px 0;
+            }
+          }
+        }
+      }
+    }
+
+		#map {
+			width: 100%;
+			height: 500px;
+			background: #000;
+      margin-bottom: 100px;
+		}
+
+    .faqWrap{
+      width: 100%;
+      padding-bottom: 100px;
+      &::after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .tWrap{
+        width: 35%;
+        float: left;
+        padding-right: 40px;
+        >p{
+          font: 700 20px/1 $poinFont;
+          color: #333;
+          margin-bottom: 30px;
+        }
+        >h5{
+          span{
+            display: block;
+            font: bolder 70px/1 'Fjalla One';
+            color: #000;
+            margin-bottom: 15px;
+          }
+        }
+      }
+      .listWrap{
+        width: 65%;
+        float: right;
+        border-left: 1px solid #bbb;
+        padding-left: 100px;
+        >h3{
+          font: 30px/1 'Fjalla One';
+          color: #000;
+          margin-bottom: 20px;
+        }
+        >p{
+          font: 16px/1.4 $poinFont;
+          color: #333;
+          padding-bottom: 40px;
+          border-bottom: 1px solid #bbb;
+        }
+
+        article{
+          padding: 30px 10px;
+          border-bottom: 1px solid #bbb;
+          &::after{
+            content: '';
+            display: block;
+            clear: both;
+          }
+          
+
+          h5{
+            float: left;
+            font: 700 18px/1 $poinFont;
+            color: #000;
+          }
+          p{
+            float: right;
+            .fa-square-plus{
+              color: $pointColor;
+            }
+          }
+        }
+      }
+    }
+    
+	}
+}

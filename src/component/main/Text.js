@@ -2,7 +2,7 @@ import React from 'react'
 
 function Text() {
   return (
-    <div>Text</div>
+    <section id='text'>text</section>
   )
 }
 

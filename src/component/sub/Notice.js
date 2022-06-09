@@ -1,8 +1,10 @@
-import React from 'react'
+import Layout from '../common/Layout';
 
 function Notice() {
   return (
-    <div>Notice</div>
+    <Layout name={'Notice'}>
+      notice
+    </Layout>
   )
 }
 

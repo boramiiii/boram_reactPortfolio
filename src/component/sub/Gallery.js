@@ -1,8 +1,10 @@
-import React from 'react'
+import Layout from '../common/Layout';
 
 function Gallery() {
   return (
-    <div>Gallery</div>
+    <Layout name={'Gallery'}>
+      gallery
+    </Layout>
   )
 }
 

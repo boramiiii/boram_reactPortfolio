@@ -1,6 +1,6 @@
 import Layout from '../common/Layout';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Popup from '../common/Popup';
 
 function Youtube() {
@@ -9,6 +9,7 @@ function Youtube() {
   const [Index, setIndex] = useState(0);
   const visualImg = `${process.env.PUBLIC_URL}/img/visual_img4.jpg`;
   const playBtn = `${process.env.PUBLIC_URL}/img/play_btn.png`;
+  const frame = useRef(null);
 
   const handlePopup = (index) => {
     setOpen(true);
@@ -20,6 +21,7 @@ function Youtube() {
     const playlist = "PLfHCKVPanu7zyjtt09sovNP8_tjZFDGrz";
     const num = 6;
     const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlist}&maxResults=${num}`;
+    frame.current.classList.add('on');
 
     axios.get(url).then((json) => {
       console.log(json);
@@ -29,7 +31,8 @@ function Youtube() {
 
   return (
     <>
-      <div className="visualWrap">
+
+      <div className="visualWrap" ref={frame}>
         <div className="visualTxt">
           dr. dre's Product Play List
         </div>

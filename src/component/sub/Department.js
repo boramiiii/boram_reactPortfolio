@@ -1,6 +1,6 @@
 import Layout from '../common/Layout';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
@@ -9,15 +9,18 @@ function Department() {
   const path = process.env.PUBLIC_URL;
   const [Members, setMembers] = useState([]);
   const smallLogo = `${process.env.PUBLIC_URL}/img/logo_small.png`;
+  const frame = useRef(null);
 
   useEffect(() => {
     axios.get(`${path}/DB/members.json`).then((json) => {
       setMembers(json.data.products);
+      frame.current.classList.add('on');
     });
   }, []);
 
+
   return (
-    <div id='dep' className='on'>
+    <div id='dep' ref={frame}>
       <div className="visualWrap">
         <div className="visualTxt">
           dr. dre's Philosophy of Music

@@ -1,8 +1,10 @@
-import React from 'react'
+import Layout from '../common/Layout';
 
 function Product() {
   return (
-    <div>Product</div>
+    <Layout name={'Product'}>
+      product
+    </Layout>
   )
 }
 

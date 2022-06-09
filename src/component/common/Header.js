@@ -54,8 +54,8 @@ function Header({ type }) {
             </NavLink>
           </li>
           <li>
-            <NavLink activeStyle={style} to='/location'>
-              Location
+            <NavLink activeStyle={style} to='/contact'>
+              Contact
             </NavLink>
           </li>
         </ul>
