@@ -157,6 +157,12 @@ function Notice() {
 
 
         <div className='showBox'>
+          <div className="head">
+            <h1>순번</h1>
+            <h2>제목</h2>
+            <p>본문</p>
+            <div></div>
+          </div>
           {Posts.map((post, idx) => {
             return (
               <article key={idx}>
