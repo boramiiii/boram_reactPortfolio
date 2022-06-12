@@ -10,17 +10,25 @@ function Notice() {
   const textareaEdit = useRef(null);
   const visualImg = `${process.env.PUBLIC_URL}/img/visual_img3.jpg`;
 
-
   const [Open, setOpen] = useState(false);
-
-
-
 
   const frame = useRef(null);
 
   const getLocalData = () => {
     const data = localStorage.getItem('post');
-    return JSON.parse(data);
+    const dummyPosts = [
+      { title: 'Hello5', content: 'Here comes description in detail.' },
+      { title: 'Hello4', content: 'Here comes description in detail.' },
+      { title: 'Hello3', content: 'Here comes description in detail.' },
+      { title: 'Hello2', content: 'Here comes description in detail.' },
+      { title: 'Hello1', content: 'Here comes description in detail.' },
+    ];
+
+    if (data) {
+      return JSON.parse(data);
+    } else {
+      return dummyPosts;
+    }
   };
 
   const [Posts, setPosts] = useState(getLocalData());
