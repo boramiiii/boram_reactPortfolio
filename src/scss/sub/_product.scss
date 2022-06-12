@@ -1,0 +1,158 @@
+.Product{
+  >.inner{
+    padding: 150px 0;
+
+    .hWrap{
+      width: 100%;
+      padding: 20px 0;
+      h3{
+        font-size: $fontXXXL;
+        font-family: $specialFont;
+        color: #000;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      >p{
+        width: 100%;
+        padding: 0 5vw;
+        font-size: 20px;
+        line-height: 1.4;
+        font-family: $poinFont;
+        color: #333;
+        text-align: center;
+        margin-bottom: 100px;
+      }
+    }
+
+    .articleWrap{
+      padding: 20px 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+
+      article{
+        width: 33.33%;
+        height: 600px;
+        position: relative;
+        margin-bottom: 50px;
+        cursor: pointer;
+        
+        .pic{
+          padding: 2.5vw;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          transition: .5s;
+          img{
+            width: 100%;
+            height: 300px;
+            border-radius: 300px;
+            object-fit: cover;
+            filter: saturate(0.2);
+            transition: .5s;
+          }
+          
+          button{
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            background-color: #fff;
+            border: none;
+            position: absolute;
+            bottom: 260px;
+            right: 60px;
+            z-index: 2;
+            transition: .6s;
+            cursor: pointer;
+  
+            .fa-arrow-right-long{
+              font-size: $fontXL;
+              color: $pointColor;
+              transition: .5s;
+            }
+  
+            &:hover{
+              .fa-arrow-right-long{
+                font-size: 2rem;
+              }
+            }
+          }
+          .con{
+            width: 100%;
+            background:none;
+            z-index: 1;
+            padding: 25px;
+            transition: 1s;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            h4{
+              font-size: $fontXL;
+              font-family: $specialFont;
+              color: #000;
+              letter-spacing: 2px;
+              margin-bottom: 10px;
+              transition: .5s;
+            }
+            p{
+              font-size: $fontL;
+              color: $pointColor;
+              font-family: $poinFont;
+              font-weight: 700;
+              margin-bottom: 20px;
+              transition: .5s;
+            }
+            ul{
+              padding-right: 20px;
+              li{
+                font-family: $noto;
+                color: #333;
+                font-size: $fontM;
+                margin-bottom: 10px;
+                transition: .5s;
+              }
+            }
+          }
+        }
+        
+
+        &:hover{
+          .pic{
+            padding: 0;
+            width: 100%;
+            img{
+              height: 600px;
+              border-radius: 0;
+              filter: saturate(1);
+            }
+            button{
+              bottom: 160px;
+              right: 30px;
+            }
+            .con{
+              background:linear-gradient(transparent, $pointColor);
+              transform: translateY(0px);
+              h4{
+                color: #fff;
+              }
+              p{
+                color: #fff;
+              }
+              ul{
+                li{
+                  color: #fff;
+                }
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}

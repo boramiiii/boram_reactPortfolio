@@ -1,0 +1,57 @@
+{
+  "product": [
+    {
+      "name": "Beats Fit Pro",
+      "price": "￦255,000",
+      "t1": "유연하고 안정적인 착용감의 윙팁",
+      "t2": "액티브 노이즈 캔슬링(ANC) 및 주변음 허용 모드",
+      "t3": "액티브 노이즈 캔슬링이 켜진 상태에서 최대 6시간의 감상 시간",
+      "pic": "product/product1.jpg"
+    },
+    {
+      "name": "Beats Studio Buds",
+      "price": "₩169,000",
+      "t1": "몰입감 넘치는 감상을 위한 공간 음향 기능1 지원",
+      "t2": "액티브 노이즈 캔슬링(ANC) 및 주변음 허용 모드",
+      "t3": "ANC 미사용 시 최대 8시간 음악 감상 가능",
+      "t4": "Apple 및 안드로이드 와 원터치 페어링",
+      "pic": "product/product2.jpg"
+    },
+    {
+      "name": "Beats Flex",
+      "price": "￦84,000",
+      "t1": "자동 재생/일시 정지 기능을 지원하는 마그네틱 이어버드",
+      "t2": "강력하고 섬세한 사운드",
+      "t3": "최대 12시간의 감상 시간",
+      "t4": "Apple W1 칩 및 Class 1 Wireless Bluetooth®",
+      "pic": "product/product3.jpg"
+    },
+    {
+      "name": "Powerbeats Pro",
+      "price": "￦269,000",
+      "t1": "안정적으로 착용할 수 있는 조절 가능한 이어후크",
+      "t2": "역동적인 음역대 및 소음 차단 기능으로 강력한 사운드 전달",
+      "t3": "최대 9시간의 감상 시간",
+      "t4": "Apple H1 칩을 통한 자동 재생/일시 정지 연결",
+      "pic": "product/product4.jpg"
+    },
+    {
+      "name": "Beats Solo3 Wireless",
+      "price": "￦239,000",
+      "t1": "맞춤 착용이 가능한 편안한 쿠션형 이어컵",
+      "t2": "소음 차단 기능과 함께 정교하게 튜닝된 어쿠스틱을 통해 전달되는 명료하고 깊이 있는 사운드",
+      "t3": "최대 40시간의 감상 시간",
+      "t4": "Apple W1 칩 및 Class 1 Wireless Bluetooth®",
+      "pic": "product/product5.jpg"
+    },
+    {
+      "name": "Beats Studio3 Wireless",
+      "price": "￦406,000",
+      "t1": "온이어 컨트롤 기능의 인체공학적 이어컵",
+      "t2": "액티브 노이즈 캔슬링(ANC)",
+      "t3": "최대 22시간의 감상 시간",
+      "t4": "Apple W1 칩 및 Class 1 Wireless Bluetooth®",
+      "pic": "product/product6.jpg"
+    }
+  ]
+}
