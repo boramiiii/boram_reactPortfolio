@@ -1,0 +1,168 @@
+.Join {
+  background-color: #222;
+
+  >.inner {
+    padding: 250px 0 200px;
+
+    h2 {
+      font-size: $fontXXXL;
+      font-family: $specialFont;
+      color: #fff;
+      margin-bottom: 100px;
+    }
+
+    h4 {
+      width: 30%;
+      padding: 20px 40px;
+      background-color: #111;
+      font: 700 18px/1 $poinFont;
+      color: $pointColor;
+    }
+
+    table {
+      border: none;
+      border-top: 2px solid #000;
+      width: 100%;
+      tbody{
+        padding-top: 40px;
+        display: block;
+      }
+
+      tr {
+        th {
+          width: 20%;
+          height: 100px;
+          border: none;
+          padding: 20px 30px 20px 0;
+          text-align: left;
+
+          label {
+            display: block;
+            height: 60px;
+            background: #333;
+            border: 1px solid #000;
+            padding: 0 20px;
+            color: #fff;
+            font: 700 14px/60px $poinFont;
+            letter-spacing: 1px;
+            .essential{
+              margin-left: 10px;
+              color: $pointColor;
+              font-weight: bold;
+            }
+          }
+
+          &:last-child {
+            text-align: center;
+          }
+
+
+
+
+          input[type='reset'],
+          input[type='submit'] {
+            width: 180px;
+            height: 60px;
+            font-family: $specialFont;
+            font-size: $fontM;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #000;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 10px;
+            letter-spacing: 2px;
+            cursor: pointer;
+          }
+        }
+
+        td {
+          border: none;
+          padding: 25px 30px;
+
+          input[type='text'],
+          input[type='password'],
+          select{
+            width: 40%;
+            border: 1px solid #000;
+            height: 60px;
+            background-color: #333;
+            padding: 0 20px;
+            color: #fff;
+          }
+          input::placeholder{
+            color: #fff;
+          }
+
+          textarea {
+            width: 60%;
+            padding: 20px;
+            border: 1px solid #000;
+            background-color: #333;
+          }
+
+          label {
+            margin-right: 6px;
+            color: #fff;
+            font-family: $poinFont;
+            font-weight: 700;
+          }
+
+          input[type='radio'],
+          input[type='checkbox'] {
+            margin-right: 20px;
+          }
+
+          .hyphen {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+          }
+
+          select#memCTel1 {
+            width: 15%;
+            background-color: #333;
+            border: 1px solid #000;
+            color: #fff;
+          }
+
+
+          select.fSelect {
+            width: 27%;
+          }
+
+          select#birth {
+            width: 20%;
+            background: #333;
+            border: 1px solid #000;
+          }
+
+          .phoneNumber {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .dash{
+              color: #fff;
+              padding: 0 10px;
+            }
+          }
+          input[type=number]#memCTel2 {
+            background: #333;
+            border: 1px solid #000;
+            height: 60px;
+          }
+
+          .err {
+            font-size: $fontS;
+            color: $pointColor;
+            font-weight: 700;
+            margin-left: 10px;
+          }
+        }
+      }
+
+    }
+  }
+}
