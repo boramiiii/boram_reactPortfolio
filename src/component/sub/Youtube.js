@@ -1,5 +1,6 @@
 import Layout from '../common/Layout';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState, useRef } from 'react';
 import Popup from '../common/Popup';
 

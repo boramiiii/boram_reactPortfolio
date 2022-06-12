@@ -1,0 +1,260 @@
+
+
+.noticeWrap{
+  >.visualWrap{
+    width: 100%;
+    height: 90vh;
+    margin-top: 100px;
+    .visualTxt{
+      font-family: 'Fjalla One';
+      font-weight: 600;
+      transform: rotate(90deg);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      bottom: 50%;
+      font-size: 40px;
+      height: 60px;
+  
+      opacity: 0;
+      transition: 1s;
+    }
+    figure{
+      width: 90%;
+      height: 100%;
+      position: relative;
+      position: relative;
+      transform: translateX(-200px);
+      opacity: 0;
+      transition: 1s;
+      transition-delay: .3s;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(1) brightness(0.8);
+      }
+      .vTxt{
+        width: 50%;
+        position: absolute;
+        bottom: 8vw;
+        left: 5vw;
+  
+        h2{
+          font-family: $poinFont;
+          font-weight: 700;
+          color: $pointColor;
+          font-size: $fontXXXL;
+          margin-bottom: 30px;
+          transform: translateX(-200px);
+          opacity: 0;
+          transition: 1s;
+          transition-delay: .8s;
+        }
+        >p{
+          font-family: $noto;
+          font-size: $fontL;
+          color: #bbb;
+          line-height: 1.6;
+          transform: translateX(-200px);
+          opacity: 0;
+          transition: 1s;
+          transition-delay: 1.3s;
+        }
+      }
+      
+    }
+    &.on{
+      .visualTxt{
+        right: -120px;
+        opacity: 1;
+      }
+      figure{
+        transform: translateX(0);
+        opacity: 1;
+        .vTxt{
+          h2{
+            opacity: 1;
+            transform: translateY(0);
+          }
+          >p{
+            opacity: 1;
+            transform: translateX(0);
+          }      
+        }
+      }
+    }
+  }
+}
+
+.Notice {
+	> .inner {
+    padding: 150px 0 200px 0;
+    h3{
+      font-size: $fontXXXL;
+      font-family: $specialFont;
+      color: #000;
+      letter-spacing: 2px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    >p{
+      width: 100%;
+      padding: 0 10vw;
+      font-size: $fontL;
+      font-family: $poinFont;
+      color: #333;
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    .hWrap{
+      width: 30%;
+      padding: 20px;
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      
+      h4{
+        font: 700 18px/1 $poinFont;
+        color: $pointColor;
+      }
+      .icon{
+        color: $pointColor;
+      }
+    }
+    // span{
+    //   display: block;
+    //   width: 100%;
+    //   height: 2px;
+    //   background-color: #000;
+    // }
+    
+		.inputBox {
+			width: 100%;
+			margin-bottom: 100px;
+      border: 1px solid #bbb;
+      border-top: 2px solid #000;
+      background-color: #fff;
+      padding: 40px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      
+      .txtSet{
+        width: 70%;
+        input[type='text']{
+          width: 30%;
+          padding: 10px 20px;
+          border: none;
+          border-bottom: 2px solid #333;
+          resize: none;
+          background-color: transparent;
+          margin-bottom: 50px;
+        }
+        textarea{
+          resize: none;
+          padding: 10px 20px;
+          width: 50%;
+          border: none;
+          border-bottom: 2px solid #333;
+          margin-bottom: 20px;
+          background-color: transparent;
+        }
+      }
+			.btnSet {
+        width: 30%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+				button {
+					width: 180px;
+					height: 50px;
+					border: none;
+					background: #000;
+					color: $pointColor;
+          font-family: $specialFont;
+          letter-spacing: 2px;
+					cursor: pointer;
+					margin-right: 20px;
+				}
+			}
+		}
+
+		.showBox {
+			width: 100%;
+			border-top: 2px solid #000;
+
+			article {
+				padding: 30px 15px;
+				display: flex;
+				justify-content: space-between;
+				align-content: center;
+				flex-wrap: wrap;
+        border-bottom: 1px solid #bbb;
+        .txt{
+          width: 80%;
+          content: '';
+          display: block;
+          clear: both;
+          h1{
+            width: 20%;
+            float: left;
+            font: 20px/30px $specialFont;
+            color: $pointColor;
+          }
+          h2{
+            width: 30%;
+            float: left;
+            font: bold 18px/30px $noto;
+            color: #333;
+          }
+          >p{
+            float: left;
+            width: 50%;
+            font: 18px/30px $noto;
+            color: #333;
+          }
+        }
+				.btnSet {
+          width: 20%;
+					display: flex;
+					align-items: center;
+
+					button {
+						width: 49%;
+						height: 40px;
+            background-color: #000;
+            color: $pointColor;
+						display: flex;
+            font-family: $specialFont;
+            letter-spacing: 2px;
+						justify-content: center;
+						align-items: center;
+						font-size: $fontS;
+						margin-left: 10px;
+						cursor: pointer;
+					}
+				}
+
+				.editTxt {
+					width: 60%;
+					input[type='text'],
+					textarea {
+						width: 100%;
+						padding: 4px 8px;
+						border: 1px solid #aaa;
+						margin-bottom: 10px;
+						resize: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+
+}
