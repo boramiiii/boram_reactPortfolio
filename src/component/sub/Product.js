@@ -3,22 +3,33 @@ import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowRight } from '@fortawesome/free-solid-svg-icons';
+import ProductPopup from '../common/ProductPopup';
 
 function Product() {
   const path = process.env.PUBLIC_URL;
   const frame = useRef(null);
   const [Products, setProducts] = useState([]);
+  const [Open, setOpen] = useState(false);
+  const [Index, setIndex] = useState(0);
+
   const visualImg = `${process.env.PUBLIC_URL}/img/visual_img7.jpg`;
+
+  const handlePopup = (index) => {
+    setOpen(true);
+    setIndex(index);
+  }
+
 
   useEffect(() => {
     frame.current.classList.add('on');
     axios.get(`${path}/DB/products.json`).then((json) => {
+      const pLength = json.data.product.length;
+      console.log(pLength);
+
+
       setProducts(json.data.product);
     });
   }, [])
-
-
-
   return (
     <>
       <div className="visualWrap" ref={frame}>
@@ -46,7 +57,7 @@ function Product() {
               <article key={idx}>
                 <div className="pic">
                   <img src={`${path}/img/${product.pic}`} alt={product.name} />
-                  <button>
+                  <button onClick={() => { handlePopup(idx) }}>
                     <FontAwesomeIcon icon={faLongArrowRight} />
                   </button>
                   <div className="con">
@@ -65,6 +76,37 @@ function Product() {
           })}
         </div>
       </Layout>
+      {Open && (
+        <ProductPopup setOpen={setOpen}>
+          <div>
+            <div className="pic">
+              <img src={`${path}/img/${Products[Index].pic}`} alt={Products[Index].name} />
+            </div>
+            <div className="con">
+              <h2>{Products[Index].name}</h2>
+              <p>{Products[Index].title}</p>
+              <div className="conWrap">
+                <article>
+                  <h3>Sound</h3>
+                  <h4>{Products[Index].sound}</h4>
+                </article>
+                <article>
+                  <h3>Connect</h3>
+                  <h4>{Products[Index].on}</h4>
+                </article>
+                <article>
+                  <h3>Control</h3>
+                  <h4>{Products[Index].control}</h4>
+                </article>
+                <article>
+                  <h3>Composition</h3>
+                  <h4>{Products[Index].gu}</h4>
+                </article>
+              </div>
+            </div>
+          </div>
+        </ProductPopup>
+      )}
     </>
   )
 }

@@ -2,7 +2,7 @@ import Layout from '../common/Layout';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState, useRef } from 'react';
-import Popup from '../common/Popup';
+import PopupYoutube from '../common/PopupYoutube';
 
 function Youtube() {
   const [Vids, setVids] = useState([]);
@@ -84,11 +84,11 @@ function Youtube() {
         })}
       </Layout>
       {Open && (
-        <Popup setOpen={setOpen}>
+        <PopupYoutube setOpen={setOpen}>
           <iframe
             src={`https://www.youtube.com/embed/${Vids[Index].snippet.resourceId.videoId}`}
             frameBorder='0'></iframe>
-        </Popup>
+        </PopupYoutube>
       )}
     </>
   );

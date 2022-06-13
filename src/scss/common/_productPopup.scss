@@ -1,0 +1,63 @@
+.product_pop{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  padding: 5vw 10vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  .content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+
+    >div{
+      width: 100%;
+      height: 100%;
+
+      &::after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      >.pic{
+        width: 40%;
+        height: 100%;
+        float: left;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      >.con{
+        width: 60%;
+        float: left;
+      }
+    }
+
+
+
+
+    >.close{
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      color: $pointColor;
+      top: -60px;
+      right: 0;
+      
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+        filter: invert(1);
+      }
+    }
+  }
+  
+}
