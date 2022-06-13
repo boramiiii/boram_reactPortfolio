@@ -59,14 +59,18 @@ header{
 
       li{
         float: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
         border-right: 1px solid #bbb;
         a{
           display: block;
           font-family: $poinFont;
           color: #111;
           font-size: 18px;
-          line-height: 100px;
           padding: 0 3.8vw;
+          line-height: 1;
+          text-align: center;
         }
         &:last-child{
           border-right: 0px;

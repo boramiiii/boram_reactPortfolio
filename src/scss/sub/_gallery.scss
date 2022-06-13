@@ -1,0 +1,132 @@
+.Gallery {
+  background-color: #222;
+  >.inner{
+    padding: 200px 0 150px;
+    .hWrap{
+      width: 100%;
+      padding: 20px 0;
+      h3{
+        font-size: $fontXXXL;
+        font-family: $specialFont;
+        color: $pointColor;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      >p{
+        width: 100%;
+        padding: 0 5vw;
+        font-size: 20px;
+        line-height: 1.4;
+        font-family: $poinFont;
+        color: #bbb;
+        text-align: center;
+        margin-bottom: 100px;
+      }
+    }
+
+    .loading {
+      width: 30%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .searchBox{
+      width: 100%;
+      margin-bottom: 50px;
+      padding: 0 3vw;
+      &::after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      input{
+        width: 95%;
+        float: left;
+        border: 3px solid $pointColor;
+        background: #222;
+        padding: 20px 10px;
+        color: #fff;
+      }
+      button{
+        float: left;
+        width: 5%;
+        padding: 20px;
+        background-color: $pointColor;
+        border: 3px solid $pointColor;
+        .fa-magnifying-glass{
+          color:#fff;
+        }
+      }
+    }
+    .frame {
+      transition: transform 2s, opacity 2s;
+      transform: translateY(200px);
+      opacity: 0;
+  
+      &.on {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+  
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      article {
+        width: 25%;
+        padding: 10px;
+        float: left;
+  
+        .inner {
+          width: 100%;
+          background: #fff;
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  
+          .pic {
+            width: 100%;
+            margin-bottom: 5px;
+  
+            img {
+              width: 100%;
+            }
+          }
+          .con{
+            padding: 20px;
+            h2 {
+              font: 18px/1.2 $specialFont;
+              color: $pointColor;
+              margin-bottom: 20px;
+            }
+            p{
+              font: 16px/1.3 $poinFont;
+              color: #333;
+              margin-bottom: 30px;
+            }
+            .profile{
+              display: flex;
+              align-items: center;
+              justify-items: flex-start;
+              >img{
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+                border-radius: 15px;
+              }
+              span{
+                margin-left: 15px;
+                font: 700 14px/30px $poinFont;
+                color: #333;
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+	
+}
