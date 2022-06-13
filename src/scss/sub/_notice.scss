@@ -88,12 +88,13 @@
 }
 
 .Notice {
+  background-color: #222;
 	> .inner {
     padding: 150px 0 200px 0;
     h3{
       font-size: $fontXXXL;
       font-family: $specialFont;
-      color: #000;
+      color: $pointColor;
       letter-spacing: 2px;
       text-align: center;
       margin-bottom: 30px;
@@ -104,7 +105,7 @@
       font-size: 20px;
       line-height: 1.4;
       font-family: $poinFont;
-      color: #333;
+      color: #bbb;
       text-align: center;
       margin-bottom: 100px;
     }
@@ -112,7 +113,7 @@
     .hWrap{
       width: 30%;
       padding: 20px;
-      background-color: #111;
+      background-color: $pointColor;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -120,10 +121,10 @@
       
       h4{
         font: 700 18px/1 $poinFont;
-        color: $pointColor;
+        color: #222;
       }
       .icon{
-        color: $pointColor;
+        color: #000;
       }
     }
     // span{
@@ -136,9 +137,9 @@
 		.inputBox {
 			width: 100%;
 			margin-bottom: 100px;
-      border: 1px solid #bbb;
-      border-top: 2px solid #000;
-      background-color: #fff;
+      border: 2px solid $pointColor;
+      border-top: 2px solid $pointColor;
+      background-color: #f3f1f1;
       padding: 40px 30px;
       display: flex;
       justify-content: space-between;
@@ -186,12 +187,12 @@
 
 		.showBox {
 			width: 100%;
-			border-top: 2px solid #000;
+			border-top: 2px solid $pointColor;
       .head{
         width: 100%;
         padding: 20px 15px;
         border: none;
-        border-bottom: 2px solid #000;
+        border-bottom: 2px solid $pointColor;
         &::after{
           content: '';
           display: block;
@@ -202,16 +203,19 @@
           width: 20%;
           float: left;
           font:bold 15px/30px $noto;
+          color: #bbb;
         }
         h2{
           width: 30%;
           float: left;
           font: bold 15px/30px $noto;
+          color: #bbb;
         }
         p{
           float: left;
           width: 50%;
           font: bold 15px/30px $noto;
+          color: #bbb;
         }
         
       }
@@ -221,7 +225,7 @@
 				justify-content: space-between;
 				align-content: center;
 				flex-wrap: wrap;
-        border-bottom: 1px solid #bbb;
+        border-bottom: 1px solid $pointColor;
         .txt{
           width: 80%;
           content: '';
@@ -231,19 +235,19 @@
             width: 20%;
             float: left;
             font: 20px/30px $specialFont;
-            color: $pointColor;
+            color: #bbb;
           }
           h2{
             width: 30%;
             float: left;
             font: bold 18px/30px $noto;
-            color: #333;
+            color: #bbb;
           }
           >p{
             float: left;
             width: 50%;
             font: 18px/30px $noto;
-            color: #333;
+            color: #bbb;
           }
         }
 				.btnSet {
@@ -254,8 +258,10 @@
 					button {
 						width: 49%;
 						height: 40px;
-            background-color: #000;
-            color: $pointColor;
+            background-color: $pointColor;
+            border: none;
+            color: #000;
+            font-weight: bold;
 						display: flex;
             font-family: $specialFont;
             letter-spacing: 2px;
