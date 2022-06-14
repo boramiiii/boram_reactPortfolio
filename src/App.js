@@ -8,11 +8,8 @@ import Footer from './component/common/Footer';
 import Header from './component/common/Header';
 
 //main
-import MainImg from './component/main/MainImg';
-import Plist from './component/main/Plist';
-import Products from './component/main/Products';
-import Text from './component/main/Text';
-import Video from './component/main/Video';
+import Main from './component/main/Main';
+
 
 //sub
 import Department from './component/sub/Department';
@@ -27,21 +24,8 @@ function App() {
 	return (
 		<>
 			<Switch>
-				<Route exact path='/'>
-					{/* 메인용 header */}
-					<Header type={'main'} />
-					<MainImg />
-					<Plist />
-					<Products />
-					<Text />
-					<Video />
-				</Route>
-
-				{/* 서브용 header */}
-				<Route
-					path='/'
-					render={() => <Header type={'sub'} />}
-				/>
+				<Route exact path='/' component={Main} />
+				<Route path='/' render={() => <Header type={'sub'} />} />
 			</Switch>
 
 			<Route path='/department' component={Department} />

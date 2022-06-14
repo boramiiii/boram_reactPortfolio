@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function ProductPopup({ children, setOpen }) {
   useEffect(() => {
@@ -11,14 +12,20 @@ function ProductPopup({ children, setOpen }) {
 
   const closeBtn = `${process.env.PUBLIC_URL}/img/close.png`;
   return (
-    <aside className='product_pop'>
-      <div className="content">
-        {children}
-        <span className="close" onClick={() => setOpen(false)}>
-          <img src={closeBtn} alt="" />
-        </span>
-      </div>
-    </aside>
+    <AnimatePresence>
+      <motion.aside className='product_pop' initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1, transition: { duration: .5 } }}
+        exit={{ opacity: 0, scale: 0 }}>
+        <motion.div className="content" initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1, transition: { duration: .5, delay: .5 } }}
+          exit={{ opacity: 0, scale: 0 }}>
+          {children}
+          <span className="close" onClick={() => setOpen(false)}>
+            <img src={closeBtn} alt="" />
+          </span>
+        </motion.div>
+      </motion.aside>
+    </AnimatePresence>
   );
 
 }

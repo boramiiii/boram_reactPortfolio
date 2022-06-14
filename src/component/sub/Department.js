@@ -5,6 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
 function Department() {
   const path = process.env.PUBLIC_URL;
   const [Members, setMembers] = useState([]);
@@ -30,10 +37,10 @@ function Department() {
           <p>
             Beats by Dr. Dre(이하 Beats)는 2006년 Dr. Dre와 Jimmy Iovine이 설립한 최고의 오디오 브랜드입니다. Beats는 그동안 프리미엄 소비자 헤드폰, 이어폰, 스피커 제품군을 통해 프리미엄 사운드 엔터테인먼트의 가능성에 대해 완전히 새로운 시대를 열었습니다. 브랜드의 꾸준한 성공을 통해 전 세계 음악 애호가들에게 녹음 스튜디오 현장에서만 느낄 수 있는 에너지, 감정, 흥분을 직접 경험하는 듯한 감동을 전달해 줍니다. Apple Inc.는 2014년 7월에 Beats를 인수했습니다.
           </p>
-          <div className='btns'>
+          {/* <div className='btns'>
             <FontAwesomeIcon icon={faAngleLeft} />
             <FontAwesomeIcon icon={faAngleRight} />
-          </div>
+          </div> */}
         </figure>
       </div>
 
