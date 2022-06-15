@@ -20,7 +20,19 @@ import Product from './component/sub/Product';
 import Youtube from './component/sub/Youtube';
 import Join from './component/sub/Join';
 
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
 function App() {
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+
+		dispatch({ type: 'YOUTUBE_START' });
+		dispatch({ type: 'PRODUCT_START' });
+
+	}, []);
+
 	return (
 		<>
 			<Switch>

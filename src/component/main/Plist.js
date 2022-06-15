@@ -1,8 +1,11 @@
-import React from 'react'
 
 function Plist() {
   return (
-    <section id='pList'>plist</section>
+    <section id='pList'>
+      <div className="inner">
+
+      </div>
+    </section>
   )
 }
 

@@ -4,15 +4,22 @@ import { useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowRight } from '@fortawesome/free-solid-svg-icons';
 import ProductPopup from '../common/ProductPopup';
+import { setProducts } from '../../redux/action';
+import { useSelector, useDispatch } from 'react-redux';
+
 
 function Product() {
   const path = process.env.PUBLIC_URL;
   const frame = useRef(null);
-  const [Products, setProducts] = useState([]);
+  // const [Products, setProducts] = useState([]);
   const [Open, setOpen] = useState(false);
   const [Index, setIndex] = useState(0);
 
+  const dispatch = useDispatch();
+
   const visualImg = `${process.env.PUBLIC_URL}/img/visual_img7.jpg`;
+
+  const Products = useSelector((store) => store.productReducer.product);
 
   const handlePopup = (index) => {
     setOpen(true);
@@ -22,14 +29,13 @@ function Product() {
 
   useEffect(() => {
     frame.current.classList.add('on');
-    axios.get(`${path}/DB/products.json`).then((json) => {
-      const pLength = json.data.product.length;
-      console.log(pLength);
-
-
-      setProducts(json.data.product);
-    });
+    // axios.get(`${path}/DB/products.json`).then((json) => {
+    //   const action = setProducts(json.data.product);
+    //   dispatch(action);
+    // });
   }, [])
+
+
   return (
     <>
       <div className="visualWrap" ref={frame}>

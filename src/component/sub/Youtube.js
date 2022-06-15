@@ -3,31 +3,46 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState, useRef } from 'react';
 import PopupYoutube from '../common/PopupYoutube';
+import { setYoutube } from '../../redux/action';
+import { useSelector, useDispatch } from 'react-redux';
 
 function Youtube() {
-  const [Vids, setVids] = useState([]);
+  // const [Vids, setVids] = useState([]);
   const [Open, setOpen] = useState(false);
   const [Index, setIndex] = useState(0);
   const visualImg = `${process.env.PUBLIC_URL}/img/visual_img4.jpg`;
   const playBtn = `${process.env.PUBLIC_URL}/img/play_btn.png`;
+
   const frame = useRef(null);
+  //추가
+  const Vids = useSelector((store) => store.youtubeReducer.youtube);
+  const dispatch = useDispatch();
 
   const handlePopup = (index) => {
     setOpen(true);
     setIndex(index);
   }
-
-  useEffect(() => {
-    const key = "AIzaSyD8CO3HqgmKUUwhHdahg0c9Xpw7_AR1Q7M ";
-    const playlist = "PLfHCKVPanu7zyjtt09sovNP8_tjZFDGrz";
-    const num = 6;
+  //리덕스사가 추가 - action 으로 보내서 처리
+  const fetchYoutube = async () => {
+    const key = 'AIzaSyC77Pd__ju0Wqx_Umc-IuW7Cn2mWi_HVsk';
+    const playlist = 'PLHtvRFLN5v-W-izd7V4JH2L4-RTW0WRi3';
+    const num = 8;
     const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlist}&maxResults=${num}`;
-    frame.current.classList.add('on');
 
-    axios.get(url).then((json) => {
-      console.log(json);
-      setVids(json.data.items);
+    await axios.get(url).then((json) => {
+      //해당 컴포넌트에서 axios로 받아진 비동기 데이터를 지역state에 저장하는게 아닌
+      //action.js에서 가지고 setYoutube 액션 생성함수의 인수로 전달
+      //setYoutbue는 다음과 같은 액션 객체 반환
+      //{type: 'SET_YOUTUBE', payload: json.data.items}
+      const action = setYoutube(json.data.items);
+      //액션생성함수로 만들어진 action객체를 dispatch로 리듀서에 전달
+      dispatch(action);
+      // 같은말 === dispatch(setYoutube(json.data.items))
     });
+  };
+  useEffect(() => {
+    frame.current.classList.add('on');
+    fetchYoutube();
   }, []);
 
   return (

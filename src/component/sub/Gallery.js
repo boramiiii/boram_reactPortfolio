@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import Masonry from 'react-masonry-component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import PopupYoutube from '../common/PopupYoutube';
 
 // key = '924c973728459558f365843e3470c57a';
 function Gallery() {
