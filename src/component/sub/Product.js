@@ -20,6 +20,7 @@ function Product() {
   const visualImg = `${process.env.PUBLIC_URL}/img/visual_img7.jpg`;
 
   const Products = useSelector((store) => store.productReducer.product);
+  console.log(Products)
 
   const handlePopup = (index) => {
     setOpen(true);

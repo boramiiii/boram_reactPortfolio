@@ -1,10 +1,211 @@
 #pList{
+  background-color: #fff;
   width: 100%;
-  height: 100vh;
-  background-color: lightblue;
-  text-align: center;
-  color: #fff;
-  font-size: $fontXXL;
-  font-weight: bold;
-  line-height: 100vh;
+  position: relative;
+  z-index: 2;
+  &::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .inner{
+    width: 77%;
+    background-color: #bbb;
+    float: right;
+    transform: translateY(-20vh);
+    .articleWrap{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      article{
+        width: 25%;
+        position: relative;
+        transition: .5s;
+
+        .pic{
+          width: 100%;
+          height: 500px;
+          background-color: #111;
+          transition: .5s;
+
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .4;
+            filter: grayscale(.6);
+          }
+        }
+        .con{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 40px 20px;
+          
+
+          .tCon{
+            display: flex;
+            justify-content: space-between;
+            opacity: .4;
+            transition: .5s;
+            transition-delay: 0;
+
+            h2{
+              width: 30%;
+              font: 25px/1.3 'Exo';
+              color: #fff;
+            }
+            p{
+              font: 30px/1 'Exo';
+              color: #fff;
+            }
+          }
+          h3{
+            font: 12px/1 $poinFont;
+            color: #fff;
+            opacity: .4;
+            transition: .5s;
+            transition-delay: 0;
+          }
+          .detailTxt{
+            &::before{
+              content: '';
+              display: block;
+              width: 10%;
+              height: 2px;
+              background-color: #fff;
+              margin-bottom: 30px;
+            }
+
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+            visibility: hidden;
+            opacity: 0;
+            transition: .5s;
+
+            .txt{
+              width: 60%;
+              font: 100 15px/1.5 $noto;
+              color: #fff;
+              margin-bottom: 20px;
+            }
+            >button{
+              border: none;
+              a{
+                padding: 10px 20px;
+                background-color: #000;
+                display: block;
+                color: $pointColor;
+                font:12px/1 $specialFont;
+
+                .fa-arrow-right-long{
+                  padding-left: 15px;
+                }
+              }
+              
+            }
+          }
+          
+        }
+
+        &:hover{
+          width: 50%;
+          .pic{
+            background-color: $pointColor;
+          }
+          .con{
+            .tCon{
+              opacity: 1;
+              h2{
+                width: 15%;
+              }
+            }
+            h3{
+              opacity: 1;
+            }
+            .detailTxt{
+              bottom: 40px;
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .pLayout{
+      width: 100%;
+      background: linear-gradient(#111 50%, #ffffff 50%);
+      &::before{
+        content: '';
+        display: block;
+        width: 1px;
+        height: 100px;
+        margin-left: 58.5vw;
+        background-color: #bbb;
+      }
+      &::after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .left{
+        float: left;
+        width: 30%;
+        height: 580px;
+        top: 0;
+        left: 0;
+        border: 1px solid #bbb;
+        padding: 50px;
+        h3{
+          font: 35px/1.3 'Exo';
+          color: #fff;
+          margin-bottom: 20px;
+        }
+        p{
+          font: 14px/1 $poinFont;
+          color: #fff;
+          margin-bottom: 50px;
+        }
+        img{
+          width: 80%;
+          float: right;
+          object-fit: cover;
+        }
+      }
+      .right{
+        float: right;
+        width: 70%;
+        height: 580px;
+        right: 0;
+        top: 0;
+        border-top: 1px solid #bbb;
+        border-bottom: 1px solid #bbb;
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+        .rCon{
+          >p{
+            font: 12px/1 $poinFont;
+            color: #fff;
+            margin-bottom: 20px;
+          }
+          h3{
+            font: 35px/1.3 'Exo';
+            color: #fff;
+          }
+        }
+        
+        img{
+          width: 50%;
+          float: right;
+          object-fit: cover;
+        }
+      }
+      
+    }
+  }
 }

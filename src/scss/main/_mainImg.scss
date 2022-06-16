@@ -26,7 +26,8 @@
           width: 77%;
           position: absolute;
           right: 0;
-          top: 55%;
+          top: 50%;
+          transform: translateY(-50%);
           h2{
             font: 45px/1.4 'Exo';
             letter-spacing: 2px;
@@ -41,7 +42,7 @@
         .t1{
           position: absolute;
           left: 23%;
-          top: 30%;
+          top: 24%;
           font: 14px/1.5 $poinFont;
           color: #bbb;
           padding-bottom: 5px;
@@ -61,7 +62,7 @@
         .t3{
           position: absolute;
           right: 22%;
-          bottom: 33%;
+          bottom: 50%;
           font: 14px/1.5 $poinFont;
           color: #bbb;
           padding-top: 5px;
@@ -70,6 +71,7 @@
         }
 			}
 		}
+    
 		.swiper-button-prev{
       filter: grayscale(1) invert(1);
       padding: 50px;
@@ -77,6 +79,7 @@
       border: 2px solid #1b68f8;
       left: 50px;
       transition: .2s;
+      transform: scale(.5);
 
       &:hover{
         filter:grayscale(1) invert(39%) sepia(30%) saturate(6251%) hue-rotate(340deg) brightness(93%) contrast(93%);
@@ -89,6 +92,7 @@
       border: 2px solid #1b68f8;
       right: 50px;
       transition: .2s;
+      transform: scale(.5);
 
       &:hover{
         filter:grayscale(1) invert(39%) sepia(30%) saturate(6251%) hue-rotate(340deg) brightness(93%) contrast(93%);
