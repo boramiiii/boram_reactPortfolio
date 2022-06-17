@@ -4,7 +4,9 @@ import Plist from './Plist';
 import Products from './Products';
 import Text from './Text';
 import Video from './Video';
+import News from './News';
 import Anime from '../../asset/anime.js';
+
 import { useRef, useEffect, useState } from 'react';
 
 
@@ -18,8 +20,9 @@ function Main() {
         <MainImg />
         <Plist />
         <Products />
-        <Text />
         <Video />
+        <Text />
+        <News />
       </main>
     </>
   )

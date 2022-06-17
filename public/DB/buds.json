@@ -1,0 +1,51 @@
+{
+  "buds": [
+    {
+      "color": "Ocean Blue",
+      "price": "₩169,000",
+      "img": "product/buds/p1.png"
+    },
+    {
+      "color": "Moon Grey",
+      "price": "₩169,000",
+      "img": "product/buds/p2.png"
+    },
+    {
+      "color": "Sunset Pink",
+      "price": "₩169,000",
+      "img": "product/buds/p3.png"
+    },
+    {
+      "color": "Black",
+      "price": "₩169,000",
+      "img": "product/buds/p4.png"
+    },
+    {
+      "color": "White",
+      "price": "₩169,000",
+      "img": "product/buds/p5.png"
+    }
+  ],
+  "fit": [
+    {
+      "color": "Beats Black",
+      "price": "₩169,000",
+      "img": "product/fit/p1.png"
+    },
+    {
+      "color": "Beats White",
+      "price": "₩169,000",
+      "img": "product/fit/p2.png"
+    },
+    {
+      "color": "Sage Grey",
+      "price": "₩169,000",
+      "img": "product/fit/p3.png"
+    },
+    {
+      "color": "Stone Purple",
+      "price": "₩169,000",
+      "img": "product/fit/p4.png"
+    }
+  ]
+}
