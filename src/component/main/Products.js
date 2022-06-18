@@ -7,10 +7,13 @@ import { useState, useEffect, useRef } from 'react';
 function Products() {
   const path = process.env.PUBLIC_URL;
   const [ProductFit, setProductFit] = useState(false);
+  const btnOn = useRef(null);
+  const [Tab, setTab] = useState('fit');
 
-  const handleTab = (tab) => {
-    console.log(tab);
+  const handleTab = (tab, model) => {
+
     setProductFit(tab);
+    setTab(model)
   };
 
   const selectComponent = {
@@ -20,19 +23,22 @@ function Products() {
 
   useEffect(() => {
     setProductFit(false);
+
   }, []);
-
-
 
   return (
     <>
       <section id='products'>
-        <ul>
-          <li onClick={() => { handleTab("false") }}>BEATS FIT PRO</li>
-          <li onClick={() => { handleTab("true") }}>BEATS STUDIO BUDS</li>
-        </ul>
-        <div className="listWrap">
-          <div>{selectComponent[ProductFit]}</div>
+        <div className='inner'>
+          <ul className='btns' ref={btnOn}>
+            <li className={`${Tab === 'fit' ? 'on' : ''}`}
+              onClick={() => { handleTab("false", "fit") }}>BEATS FIT PRO</li>
+            <li className={`${Tab === 'buds' ? 'on' : ''}`}
+              onClick={() => { handleTab("true", "buds") }}>BEATS STUDIO BUDS</li>
+          </ul>
+          <div className="listWrap">
+            <div>{selectComponent[ProductFit]}</div>
+          </div>
         </div>
       </section>
     </>

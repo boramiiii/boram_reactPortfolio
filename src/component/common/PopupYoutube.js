@@ -14,7 +14,7 @@ function PopupYoutube({ children, setOpen }) {
   return (
     <AnimatePresence>
       <motion.aside className='pop' initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1, transition: { duration: .5 } }}
+        animate={{ opacity: 1, scale: 1, transition: { duration: .3 } }}
         exit={{ opacity: 0, scale: 0 }}>
         <div className="con">
           {children}

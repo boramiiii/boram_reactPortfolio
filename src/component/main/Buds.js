@@ -15,7 +15,7 @@ function Buds() {
   return (
     <>
       {ProductFit.map((product, idx) => {
-        console.log(product);
+        // console.log(product);
         return (
           <article key={idx}>
             <div className='inner'>
@@ -25,8 +25,10 @@ function Buds() {
                   alt={product.color}
                 />
               </div>
-              <h3>{product.color}</h3>
-              <p>{product.price}</p>
+              <div className='con'>
+                <h3>{product.color}</h3>
+                <p>{product.price}</p>
+              </div>
             </div>
           </article>
         );

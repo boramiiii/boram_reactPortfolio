@@ -136,7 +136,7 @@ function Notice() {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nulla praesentium tempore, blanditiis expedita unde ex aliquam libero repudiandae rem fugiat fuga?
         </p>
         <div className='hWrap'>
-          <h4>dr.dre Youtube</h4>
+          <h4>dr.dre Notice</h4>
           <div className="icon" onClick={() => setOpen(!Open)}>
             {Open ? <FontAwesomeIcon icon={faCaretDown} />
               : <FontAwesomeIcon icon={faCaretUp} />}

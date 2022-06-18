@@ -12,7 +12,8 @@
     width: 77%;
     background-color: #bbb;
     float: right;
-    transform: translateY(-20vh);
+    // transform: translateY(-20vh);
+    margin-top: -20vh;
     .articleWrap{
       width: 100%;
       display: flex;
@@ -159,6 +160,7 @@
         top: 0;
         left: 0;
         border: 1px solid #bbb;
+        border-bottom: none;
         padding: 50px;
         h3{
           font: 35px/1.3 'Exo';
@@ -183,7 +185,6 @@
         right: 0;
         top: 0;
         border-top: 1px solid #bbb;
-        border-bottom: 1px solid #bbb;
         padding: 50px;
         display: flex;
         justify-content: space-between;
