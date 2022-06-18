@@ -12,3 +12,10 @@ export const setProducts = (data) => {
     payload: data,
   };
 };
+
+export const setProductList = (data) => {
+  return {
+    type: 'SET_PRODUCTLIST',
+    payload: data,
+  };
+};

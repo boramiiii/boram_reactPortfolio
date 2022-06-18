@@ -16,6 +16,12 @@ export const fetchProduct = async () => {
 
   return await axios.get(url);
 }
+
+export const fetchProductList = async () => {
+  const url = `${process.env.PUBLIC_URL}/DB/buds.json`;
+
+  return await axios.get(url);
+}
 // export const fetchMember = async () => {
 //   const url = `${process.env.PUBLIC_URL}/DB/members.json`;
 

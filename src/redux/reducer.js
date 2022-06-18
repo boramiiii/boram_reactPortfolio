@@ -34,9 +34,26 @@ const productReducer = (state = { product: [] }, action) => {
   }
 };
 
+const productListReducer = (state = { fit: [], buds: [] }, action) => {
+  switch (action.type) {
+    case 'PRODUCTLIST_START':
+      return { ...state };
+
+    case 'PRODUCTLIST_SUCCESS':
+      return { ...state, fit: action.payload, buds: action.payload };
+
+    case 'PRODUCTLIST_ERROR':
+      return { ...state, error: action.payload };
+
+    default:
+      return state;
+  }
+};
+
 //각 리듀서 데이터객체를 하나로 합쳐서 내보냄
 const reducers = combineReducers({
   youtubeReducer,
-  productReducer
+  productReducer,
+  productListReducer
 });
 export default reducers;

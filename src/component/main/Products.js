@@ -3,12 +3,16 @@ import Buds from './Buds'
 import axios from 'axios';
 
 import { useState, useEffect, useRef } from 'react';
+import { setProductList } from '../../redux/action';
+import { useSelector, useDispatch } from 'react-redux';
 
 function Products() {
   const path = process.env.PUBLIC_URL;
   const [ProductFit, setProductFit] = useState(false);
   const btnOn = useRef(null);
   const [Tab, setTab] = useState('fit');
+  const dispatch = useDispatch();
+
 
   const handleTab = (tab, model) => {
 

@@ -6,7 +6,7 @@
   put : 리듀서로 액션객체를 전달 (dispatch)
 */
 import { takeLatest, all, put, fork, call } from 'redux-saga/effects';
-import { fetchYoutube, fetchProduct } from './api';
+import { fetchYoutube, fetchProduct, fetchProductList } from './api';
 
 
 //youtube saga
@@ -36,6 +36,20 @@ export function* callProduct() {
 }
 
 
+
+export function* returnProductList() {
+  try {
+    const response = yield call(fetchProductList);
+    yield put({ type: 'PRODUCTLIST_SUCCESS', payload: response.data.productList });
+  } catch (err) {
+    yield put({ type: 'PRODUCTLIST_ERROR', payload: err });
+  }
+}
+export function* callProductList() {
+  yield takeLatest('PRODUCTLIST_START', returnProductList);
+}
+
+
 export default function* rootSaga() {
-  yield all([fork(callYoutube), fork(callProduct)]);
+  yield all([fork(callYoutube), fork(callProduct), fork(callProductList)]);
 }

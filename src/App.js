@@ -20,6 +20,8 @@ import Product from './component/sub/Product';
 import Youtube from './component/sub/Youtube';
 import Join from './component/sub/Join';
 
+import Btns from './component/common/Btns';
+
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -48,6 +50,7 @@ function App() {
 			<Route path='/youtube' component={Youtube} />
 			<Route path='/join' component={Join} />
 
+			<Btns />
 			<Footer />
 		</>
 	);
