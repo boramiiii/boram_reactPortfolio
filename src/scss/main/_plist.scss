@@ -210,3 +210,131 @@
     }
   }
 }
+
+@media screen and (max-width: $tablet) {
+  #pList{
+    overflow: hidden;
+    .inner{
+      width: 100%;
+      .articleWrap{
+        article{
+          .pic{
+            height: 40vh;
+          }
+          .con{
+            .tCon{
+              h2{
+                width: 100%;
+              }
+              p{
+                display: none;
+              }
+            }
+            .detailTxt{
+              &::before{
+                content: '';
+                display: block;
+                width: 10%;
+                height: 2px;
+                background-color: #fff;
+                margin-bottom: 30px;
+              }
+              .txt{
+                display: none;
+              }
+            }
+            
+          }
+        }
+      }
+      .pLayout{
+        .left{
+          height: 300px;
+          padding: 20px;
+          h3{
+            font: 25px/1.3 'Exo';
+            margin-bottom: 20px;
+          }
+          p{
+            font: 14px/1 $poinFont;
+            color: #fff;
+            margin-bottom: 30px;
+          }
+          
+        }
+        .right{
+          height: 300px;
+          padding: 20px;
+          .rCon{
+            >p{
+              font: 12px/1 $poinFont;
+              color: #fff;
+              margin-bottom: 20px;
+            }
+            h3{
+              font: 25px/1.3 'Exo';
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: $mp) {
+  #pList{
+    .inner{
+      width: 100%;
+      .articleWrap{
+        article{
+          &:nth-of-type(5), &:nth-of-type(6){
+            display: none;
+          }
+          .pic{
+            height: 50vh;
+          }
+        }
+      }
+      .pLayout{
+        &::before{
+          height: 50px;
+        }
+        .left{
+          height: 250px;
+          padding: 20px;
+          h3{
+            font: 20px/1.3 'Exo';
+            margin-bottom: 10px;
+          }
+          p{
+            font: 14px/1 $poinFont;
+            mix-blend-mode: difference;
+            margin-bottom: 0;
+          }
+          
+        }
+        .right{
+          height: 250px;
+          padding: 20px;
+          .rCon{
+            >p{
+              font: 12px/1 $poinFont;
+              color: #fff;
+              margin-bottom: 20px;
+            }
+            h3{
+              font: 20px/1.3 'Exo';
+              mix-blend-mode: difference;
+            }
+          }
+          img{
+            width: 55%;
+          }
+        }
+      }
+    }
+  }
+}

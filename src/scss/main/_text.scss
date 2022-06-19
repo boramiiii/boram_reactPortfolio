@@ -82,3 +82,95 @@
     }
   }
 }
+
+@media screen and (max-width: $tablet) {
+  #text{
+    height: 550px;
+    padding-top: 50px;
+    
+    .inner{
+      padding: 0 20px;
+      width: 100%;
+  
+      .mainTxt{
+        width: 25%;
+        h2{
+          font:bold 28px/1.4 $poinFont;
+        }
+        h3{
+          font: 22px/1.4 $poinFont;
+        }
+        p{
+          font: 14px/1 $poinFont;
+          color: #777;
+          margin-bottom: 60px;
+        }
+      }
+  
+      .pic{
+        width: 40%;
+        float: left;
+        transform: translate(50px);
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .subTxt{
+        margin-left: 80px;
+        h4{
+          font: bold 12px/1 $specialFont;
+          color: $pointColor;
+          margin-bottom: 10px;
+        }
+        p{
+          font: 22px/1.4 $poinFont;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: $mp) {
+  #text{
+    height: 550px;
+    padding-top: 50px;
+    
+    .inner{
+      padding: 0 20px;
+      width: 100%;
+  
+      .mainTxt{
+        width: 100%;
+        h2{
+          font:bold 28px/1.4 $poinFont;
+        }
+        h3{
+          font: 22px/1.4 $poinFont;
+        }
+        p{
+          font: 14px/1 $poinFont;
+          color: #777;
+          margin-bottom: 40px;
+        }
+      }
+  
+      .pic{
+        width: 50%;
+        float: left;
+        transform: translateX(31vw);
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .subTxt{
+        display: none;
+      }
+    }
+  }
+}

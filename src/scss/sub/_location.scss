@@ -82,7 +82,6 @@
   }
 }
 
-
 .Location {
 	.inner {
     padding: 150px 0;
@@ -256,4 +255,31 @@
     }
     
 	}
+}
+
+
+@media screen and (max-width: $tablet) {
+.visualWrap{
+  height: 70vh;
+  .visualTxt{
+    display: none;
+  }
+  figure{
+    width: 100%;
+    .vTxt{
+      width: 70%;
+      bottom: 25vw;
+      left: 5vw;
+      h2{
+        font-size: $fontXXL;
+      }
+      >p{
+        font-size: $fontM;
+      }
+    }
+    
+  }
+  
+}
+
 }

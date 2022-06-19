@@ -11,3 +11,11 @@
 		object-fit: cover;
 	}
 }
+
+
+@media screen and (max-width: $tablet) {
+	.upBtn {
+		bottom: 20px;
+		right: 20px;
+	}
+}

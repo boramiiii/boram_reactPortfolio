@@ -73,3 +73,56 @@
     }
   }
 }
+
+@media screen and (max-width: $tablet) {
+  #products{
+    background-color: #f2f2f2;
+    padding: 70px 20px;
+    overflow: hidden;
+    
+    >.inner{
+      width: 100%;
+      ul{
+        width: 100%;
+        padding-left: 10px;
+        li{
+          margin-right: 30px;
+          padding-top: 50px;
+          font: 20px/1 $specialFont;
+          
+        }
+      }
+  
+      .listWrap{
+        padding: 30px 0;
+        width: 100%;
+        >div{
+          width: 100%;
+          flex-wrap: wrap;
+          padding-right: 0px;
+          >article{
+            width: 20%;
+            padding: 0 10px;
+            .inner{
+              
+              .con{
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 30px;
+                h3{
+                  font:bold 18px/1 $poinFont;
+                  margin-bottom: 10px;
+                  text-align: center;
+                }
+                p{
+                  font: bold 14px/1 $poinFont;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

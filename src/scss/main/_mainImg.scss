@@ -100,3 +100,60 @@
     }
 	}
 }
+
+
+
+@media screen and (max-width: $tablet) {
+  #visual{
+    height: 80vh;
+    overflow: hidden;
+    .swiper {
+      .swiper-slide {
+        .inner {
+          
+          .tCon{
+            width: 77%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            h2{
+              font: 38px/1.4 'Exo';
+            }
+          }
+          
+        }
+      }
+      .swiper-button-prev{
+        left: 10px;
+      }
+      .swiper-button-next{
+        right: 10px;
+      }
+    }
+		
+  }
+}
+@media screen and (max-width: $mp) {
+  #visual{
+    height: 70vh;
+    .swiper {
+      .swiper-slide {
+        .inner {
+          
+          .tCon{
+            width: 77%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            h2{
+              font: 25px/1.4 'Exo';
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}

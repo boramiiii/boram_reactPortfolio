@@ -1,87 +1,3 @@
-.visualWrap{
-  width: 100%;
-  height: 100vh;
-  .visualTxt{
-    font-family: 'Fjalla One';
-    font-weight: 600;
-    transform: rotate(90deg);
-    position: absolute;
-    right: 0;
-    top: 50%;
-    bottom: 50%;
-    font-size: 40px;
-    height: 60px;
-
-    opacity: 0;
-    transition: 1s;
-  }
-  figure{
-    width: 90%;
-    height: 100%;
-    position: relative;
-    position: relative;
-    transform: translateX(-200px);
-    opacity: 0;
-    transition: 1s;
-    transition-delay: .3s;
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: grayscale(1) brightness(0.8);
-    }
-    .vTxt{
-      width: 50%;
-      position: absolute;
-      bottom: 8vw;
-      left: 5vw;
-
-      h2{
-        font-family: $poinFont;
-        font-weight: 700;
-        color: $pointColor;
-        font-size: $fontXXXL;
-        margin-bottom: 30px;
-        transform: translateX(-200px);
-        opacity: 0;
-        transition: 1s;
-        transition-delay: .8s;
-      }
-      p{
-        font-family: $noto;
-        font-size: $fontL;
-        color: #bbb;
-        line-height: 1.6;
-        transform: translateX(-200px);
-        opacity: 0;
-        transition: 1s;
-        transition-delay: 1.3s;
-      }
-    }
-    
-  }
-  &.on{
-    .visualTxt{
-      right: -120px;
-      opacity: 1;
-    }
-    figure{
-      transform: translateX(0);
-      opacity: 1;
-      .vTxt{
-        h2{
-          opacity: 1;
-          transform: translateY(0);
-        }
-        p{
-          opacity: 1;
-          transform: translateX(0);
-        }      
-      }
-    }
-  }
-}
-
 .Youtube {
   .inner{
     padding: 150px 0;
@@ -237,43 +153,42 @@
 
 
 @media screen and (max-width:$tablet) {
-	.Youtube {
-		article {
-			
-			h3 {
-				width: 47%;
-			}
-	
-			.txt {
-				width: 50%;
-			}
-	
-			.pic {
-				width: 100%;
-				margin-top:50px;
-				margin-bottom: 80px;
-			}
-		}
-	}
+  .Youtube {
+    .inner{
+      padding: 100px 0;
+      h4{
+        width: 60%;
+      }
+      article {
+        h1{
+          position: relative;
+          float: left;
+          width: 15%;
+          height: 150px;
+          font-size: $fontXXL;
+        }
+    
+        h3 {
+          height: 150px;
+          }
+    
+        .txt {
+            p {
+              font-size: $fontM;
+            }
+      
+            .span {
+              font-size: $fontS;
+            }
+          }
+        .pic {
+          height: 160px;
+        }
+
+      }
+    }
+    
+  }
+  
 }
-@media screen and (max-width:$mp) {
-	.Youtube {
-		article {
-			
-			h3 {
-				width: 100%;
-			}
-	
-			.txt {
-				width: 100%;
-				margin-top: 20px;
-			}
-	
-			.pic {
-				margin-top:40px;
-				margin-bottom: 0;
-				height: 120px;
-			}
-		}
-	}
-}
+

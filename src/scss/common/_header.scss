@@ -83,10 +83,10 @@ header{
     }
     .fa-bars {
       position: absolute;
-      bottom: 20px;
+      bottom: 40px;
       right: 30px;
       font-size: $fontXL;
-      color: #555;
+      color: #fff;
       display: none;
     }
   }
@@ -105,4 +105,52 @@ header{
       }
     }
   }
+}
+
+
+
+
+@media screen and (max-width: $tablet) {
+  header{
+    >.inner{
+      .logoWrap{
+        width: 100%;
+        background-color: rgba(0,0,0,0.7);
+        justify-content: flex-start;
+  
+        h1{
+          background-color: transparent;
+          width: 55vw;
+        }
+        p{
+          display: none;
+        }
+      }
+  
+      #gnb{
+        display: none;
+
+      }
+      .fa-bars {
+        display: block;
+      }
+    }
+  }
+
+}
+
+
+
+@media screen and (max-width: $mp) {
+  header{
+    >.inner{
+      .logoWrap{
+        h1{
+          width: 70vw;
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+
 }

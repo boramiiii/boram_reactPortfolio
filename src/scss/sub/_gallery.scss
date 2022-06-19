@@ -130,3 +130,92 @@
   }
 	
 }
+
+
+@media screen and (max-width: $tablet) {
+  .Gallery {
+    >.inner{
+      margin: 0;
+      padding: 100px 0 100px;
+      .hWrap{
+        h3{
+          font-size: $fontXXL;
+        }
+        >p{
+          font-size: 18px;
+        }
+      }
+  
+      .loading {
+        width: 20%;
+      }
+      .searchBox{
+        width: 100%;
+        margin-bottom: 50px;
+        padding: 0 3vw;
+
+        input{
+          width: 85%;
+          padding: 5vw;
+        }
+        button{
+          width: 15%;
+          padding: 5vw;
+        }
+      }
+      .frame {
+        article {
+          width: 33.33%;
+          .inner {
+            .pic {
+            }
+            .con{
+              padding: 10px;
+              h2 {
+                font: 16px/1.2 $specialFont;
+                margin-bottom: 10px;
+              }
+              p{
+                font: 14px/1.3 $poinFont;
+                margin-bottom: 20px;
+              }
+              .profile{
+                display: flex;
+                align-items: center;
+                justify-items: space-between;
+                >img{
+                  width: 20px;
+                  height: 20px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                }
+                span{
+                  margin-left: 10px;
+                  font: 700 12px/30px $poinFont;
+                }
+              }
+            }
+            
+          }
+        }
+      }
+    }
+    
+  }
+}
+
+
+@media screen and (max-width: $mp) {
+  .Gallery {
+    >.inner{
+      margin: 0;
+      padding: 100px 0 100px;
+      .frame {
+        article {
+          width: 50%;
+        }
+      }
+    }
+    
+  }
+}

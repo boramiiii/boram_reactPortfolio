@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faSignIn } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect, useRef } from 'react';
-import Menu from './Menu';
+import MobileMenu from './Menu';
 
 function Header({ type }) {
   const menu = useRef(null);
@@ -69,12 +69,12 @@ function Header({ type }) {
               </NavLink>
             </li>
           </ul>
-          {/* <FontAwesomeIcon icon={faBars} onClick={() => menu.current.toggle()} /> */}
-          <FontAwesomeIcon icon={faBars} />
+          <FontAwesomeIcon icon={faBars} onClick={() => menu.current.toggle()} />
+          {/* <FontAwesomeIcon icon={faBars} /> */}
         </div >
       </header >
 
-      {/* <Menu ref={menu} /> */}
+      <MobileMenu ref={menu} />
     </>
   );
 }
