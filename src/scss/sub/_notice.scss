@@ -1,91 +1,5 @@
 
 
-.noticeWrap{
-  >.visualWrap{
-    width: 100%;
-    height: 100vh;
-    .visualTxt{
-      font-family: 'Fjalla One';
-      font-weight: 600;
-      transform: rotate(90deg);
-      position: absolute;
-      right: 0;
-      top: 50%;
-      bottom: 50%;
-      font-size: 40px;
-      height: 60px;
-  
-      opacity: 0;
-      transition: 1s;
-    }
-    figure{
-      width: 90%;
-      height: 100%;
-      position: relative;
-      position: relative;
-      transform: translateX(-200px);
-      opacity: 0;
-      transition: 1s;
-      transition-delay: .3s;
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        filter: grayscale(1) brightness(0.8);
-      }
-      .vTxt{
-        width: 50%;
-        position: absolute;
-        bottom: 8vw;
-        left: 5vw;
-  
-        h2{
-          font-family: $poinFont;
-          font-weight: 700;
-          color: $pointColor;
-          font-size: $fontXXXL;
-          margin-bottom: 30px;
-          transform: translateX(-200px);
-          opacity: 0;
-          transition: 1s;
-          transition-delay: .8s;
-        }
-        >p{
-          font-family: $noto;
-          font-size: $fontL;
-          color: #bbb;
-          line-height: 1.6;
-          transform: translateX(-200px);
-          opacity: 0;
-          transition: 1s;
-          transition-delay: 1.3s;
-        }
-      }
-      
-    }
-    &.on{
-      .visualTxt{
-        right: -120px;
-        opacity: 1;
-      }
-      figure{
-        transform: translateX(0);
-        opacity: 1;
-        .vTxt{
-          h2{
-            opacity: 1;
-            transform: translateY(0);
-          }
-          >p{
-            opacity: 1;
-            transform: translateX(0);
-          }      
-        }
-      }
-    }
-  }
-}
-
 .Notice {
   background-color: #222;
 	> .inner {
@@ -289,5 +203,105 @@
 }
 
 @media screen and (max-width: $tablet) {
-
+  .Notice {
+    > .inner {
+      padding: 150px 20px;
+      margin: 0;
+      h3{
+        font-size: $fontXXXL;
+      }
+      >p{
+        font-size: 18px;
+      }
+  
+      .hWrap{
+        width: 60%;
+      }
+      .inputBox {
+        flex-wrap: wrap;
+        .txtSet{
+          width: 70%;
+          input[type='text']{
+            width: 80%;
+          }
+          textarea{
+            width: 100%;
+            margin-bottom: 40px;
+          }
+        }
+        .btnSet {
+          width: 100%;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          button {
+            width: 180px;
+            height: 50px;
+            border: none;
+            background: #000;
+            color: $pointColor;
+            font-family: $specialFont;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-right: 20px;
+          }
+        }
+      }
+  
+      .showBox {
+        .head{
+          width: 100%;
+          padding: 20px 15px;
+          border: none;
+          border-bottom: 2px solid $pointColor;
+          
+          h1{
+            width: 15%;
+            font:bold 16px/30px $noto;
+          }
+          h2{
+            width: 30%;
+            font: bold 16px/30px $noto;
+          }
+          p{
+            width: 50%;
+            font: bold 16px/30px $noto;
+          }
+          
+        }
+        article {
+          .txt{
+            width: 70%;
+            content: '';
+            display: block;
+            clear: both;
+            h1{
+              font: 18px/30px $specialFont;
+            }
+            h2{
+              font: bold 16px/30px $noto;
+            }
+            >p{
+              font: 16px/30px $noto;
+            }
+          }
+          .btnSet {
+            width: 30%;
+          }
+  
+          .editTxt {
+            width: 60%;
+            input[type='text'],
+            textarea {
+              width: 100%;
+              padding: 4px 8px;
+              border: 1px solid #aaa;
+              margin-bottom: 10px;
+              resize: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }

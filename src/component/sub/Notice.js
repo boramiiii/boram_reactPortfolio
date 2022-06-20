@@ -114,21 +114,19 @@ function Notice() {
 
   return (
     <>
-      <div className='noticeWrap'>
-        <div className="visualWrap" ref={frame}>
-          <div className="visualTxt">
-            Community of beats.by dr.dre
-          </div>
-          <figure>
-            <img src={visualImg} alt="" />
-            <div className='vTxt'>
-              <h2>Frequently Asked Questions</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque quo laboriosam labore debitis explicabo laudantium eius asperiores? Maxime, possimus aliquid. Nisi excepturi nesciunt voluptas id in sit commodi fugit adipisci.
-              </p>
-            </div>
-          </figure>
+      <div className="visualWrap" ref={frame}>
+        <div className="visualTxt">
+          Community of beats.by dr.dre
         </div>
+        <figure>
+          <img src={visualImg} alt="" />
+          <div className='vTxt'>
+            <h2>Frequently Asked Questions</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque quo laboriosam labore debitis explicabo laudantium eius asperiores? Maxime, possimus aliquid. Nisi excepturi nesciunt voluptas id in sit commodi fugit adipisci.
+            </p>
+          </div>
+        </figure>
       </div>
       <Layout name={'Notice'}>
         <h3>Q&A</h3>

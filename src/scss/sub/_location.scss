@@ -281,5 +281,59 @@
   }
   
 }
+.Location {
+	.inner {
+    padding: 100px 20px;
+
+    .getWrap{
+      
+      >h3{
+        font-size: 3rem;
+        margin-bottom: 80px;  
+      }
+      .tel{
+        h4{
+          font-size: $fontS;
+        }
+        p{
+          font-size: $fontXL;
+        }
+      }
+    }
+
+    .faqWrap{
+      width: 100%;
+      padding-bottom: 100px;
+      &::after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .tWrap{
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 40px;
+        >h5{
+          span{
+            font: bolder 3rem/1 'Fjalla One';
+          }
+        }
+      }
+      .listWrap{
+        width: 100%;
+        border-left: none;
+        padding-left: 0;
+        article{
+          h5{
+            font: 700 1rem/1 $poinFont;
+            padding-right: 40px;
+          }
+        }
+      }
+    }
+    
+	}
+}
 
 }
