@@ -1,13 +1,17 @@
 
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { useSelector } from 'react-redux';
+// import { setProducts } from '../../redux/action';
 import Anime from '../../asset/anime.js';
+import { useSelector, useDispatch } from 'react-redux';
 
 function Plist() {
-  const Products = useSelector((store) => store.productReducer.product);
+  // const Products = useSelector((store) => store.productReducer.product);
+  const dispatch = useDispatch();
+  const [Products, setProducts] = useState([]);
   const path = process.env.PUBLIC_URL;
 
   const panel = useRef(null);
@@ -89,7 +93,19 @@ function Plist() {
 
     activation(index);
   };
-  useEffect(() => activation(Index.current), []);
+  useEffect(() => {
+    axios.get(`${path}/DB/products.json`).then((json) => {
+      const pLength = json.data.product.length;
+      console.log(pLength);
+      setProducts(json.data.product);
+
+
+      activation(Index.current)
+    });
+    // return () => {
+    //   console.log("떠라")
+    // }
+  }, []);
 
   return (
     <>
