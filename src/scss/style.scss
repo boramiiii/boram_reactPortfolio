@@ -31,11 +31,13 @@ $mainColor:#111;
 @import 'common/menu';
 
 //main
-@import 'main/mainImg';
+// @import 'main/mainImg';
 @import 'main/plist';
 @import 'main/products';
 @import 'main/text';
 @import 'main/video';
+
+@import 'main/visual';
 
 //sub
 @import 'sub/department';

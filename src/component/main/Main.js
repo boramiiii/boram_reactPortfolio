@@ -1,12 +1,12 @@
-import MainImg from './MainImg';
 import Header from '../common/Header';
 import Plist from './Plist';
 import Products from './Products';
 import Text from './Text';
 import Video from './Video';
+import Visual from './Visual';
 import Anime from '../../asset/anime.js';
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef } from 'react';
 
 
 function Main() {
@@ -16,7 +16,7 @@ function Main() {
     <>
       <main ref={main}>
         <Header type={'main'} />
-        <MainImg />
+        <Visual />
         <Plist />
         <Products />
         <Video />
