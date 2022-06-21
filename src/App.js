@@ -39,7 +39,7 @@ function App() {
 		<>
 			<Switch>
 				<Route exact path='/' component={Main} />
-				<Route path='/' render={() => <Header type={'sub'} />} />
+				<Route path='/' component={Header} />
 			</Switch>
 
 			<Route path='/department' component={Department} />

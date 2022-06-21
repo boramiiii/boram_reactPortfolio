@@ -21,8 +21,8 @@ function Products() {
   };
 
   const selectComponent = {
-    false: <Fit />,
-    true: <Buds />
+    "false": <Fit />,
+    "true": <Buds />
   }
 
   useEffect(() => {

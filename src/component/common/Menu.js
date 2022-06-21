@@ -67,11 +67,6 @@ const Menu = forwardRef((props, ref) => {
                 Contact
               </NavLink>
             </li>
-            <li>
-              <NavLink activeStyle={style} to='/join'>
-                Join
-              </NavLink>
-            </li>
           </ul>
         </motion.nav>
       )}

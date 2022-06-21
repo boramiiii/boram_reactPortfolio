@@ -8,7 +8,7 @@ import { faLongArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Anime from '../../asset/anime.js';
 import { useSelector, useDispatch } from 'react-redux';
 
-function Plist() {
+function Visual() {
   // const Products = useSelector((store) => store.productReducer.product);
   const dispatch = useDispatch();
   const [Products, setProducts] = useState([]);
@@ -257,4 +257,4 @@ function Plist() {
   )
 }
 
-export default Plist
+export default Visual;
