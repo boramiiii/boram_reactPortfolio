@@ -6,7 +6,7 @@ function Text() {
   const path = process.env.PUBLIC_URL;
 
   return (
-    <section id='text'>
+    <section id='text' className='myScroll'>
       <div className="inner">
         <div className="mainTxt">
           <h2>

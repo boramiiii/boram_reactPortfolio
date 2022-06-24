@@ -7,11 +7,14 @@ import { setProductList } from '../../redux/action';
 import { useSelector, useDispatch } from 'react-redux';
 
 function Products() {
+  const btn = useRef(null);
   const path = process.env.PUBLIC_URL;
   const [ProductFit, setProductFit] = useState(false);
   const btnOn = useRef(null);
   const [Tab, setTab] = useState('fit');
   const dispatch = useDispatch();
+
+
 
 
   const handleTab = (tab, model) => {
@@ -27,12 +30,14 @@ function Products() {
 
   useEffect(() => {
     setProductFit(false);
+    // btn.current.classList.add("on");
 
   }, []);
 
+
   return (
     <>
-      <section id='products'>
+      <section id='products' className='myScroll'>
         <div className='inner'>
           <ul className='btns' ref={btnOn}>
             <li className={`${Tab === 'fit' ? 'on' : ''}`}

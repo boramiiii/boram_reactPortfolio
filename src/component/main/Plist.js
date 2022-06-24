@@ -1,11 +1,14 @@
-
+import { useEffect, useRef, useState } from 'react';
 
 function Plist() {
+  const move = useRef(null);
   const path = process.env.PUBLIC_URL;
+
+
 
   return (
     <>
-      <section id='pList'>
+      <section id='pList' className='myScroll'>
         <div className="inner">
           <div className="pLayout">
             <div className="left">

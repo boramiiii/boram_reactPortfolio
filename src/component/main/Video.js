@@ -19,7 +19,7 @@ function Video() {
 
   return (
     <>
-      <section id='video'>
+      <section id='video' className='myScroll'>
         <div className="inner">
           <div className="vidWrap">
             {Vids.map((vid, idx) => {

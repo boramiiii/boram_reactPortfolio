@@ -109,7 +109,7 @@ function Visual() {
 
   return (
     <>
-      <section id='slider'>
+      <section id='slider' className='myScroll'>
         <ul className='panel' ref={panel}>
           <li className='s1 on'>
             <div className='inner'>
