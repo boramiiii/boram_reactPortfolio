@@ -96,7 +96,7 @@ function Visual() {
   useEffect(() => {
     axios.get(`${path}/DB/products.json`).then((json) => {
       const pLength = json.data.product.length;
-      console.log(pLength);
+      // console.log(pLength);
       setProducts(json.data.product);
 
 

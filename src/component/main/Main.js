@@ -20,14 +20,14 @@ function Main() {
   //현재 스크롤되는 값을 관리할 state추가
   const [Scrolled, setScrolled] = useState(0);
   let secs = null;
-  const base = -200;
+  const base = -400;
 
   const getPos = () => {
     pos.current = [];
     secs = main.current.querySelectorAll('.myScroll');
-    for (const sec of secs) pos.current.push(sec.offsetTop);
-
-    console.log(pos)
+    for (const sec of secs) {
+      pos.current.push(sec.offsetTop);
+    }
   };
 
   const activation = () => {
@@ -59,6 +59,11 @@ function Main() {
     };
 
   }, []);
+
+  useEffect(() => {
+    getPos();
+  }, [Scrolled])
+
 
 
 
