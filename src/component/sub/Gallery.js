@@ -78,7 +78,7 @@ function Gallery() {
     console.log(Items)
     getFlickr({
       type: 'user',
-      count: 50,
+      count: 14,
       user: '195706456@N03',
     });
   }, []);

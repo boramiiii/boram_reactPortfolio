@@ -4,6 +4,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle, faMapMarkerAlt, faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 
 function Location() {
+
+  //notice에 저장된 글 불러오기
+  const getLocalData = () => {
+    const data = localStorage.getItem('post');
+    const dummyPosts = [
+      { title: 'Hello5', content: 'Here comes description in detail.' },
+      { title: 'Hello4', content: 'Here comes description in detail.' },
+      { title: 'Hello3', content: 'Here comes description in detail.' },
+      { title: 'Hello2', content: 'Here comes description in detail.' },
+      { title: 'Hello1', content: 'Here comes description in detail.' },
+    ];
+
+    if (data) {
+      return JSON.parse(data);
+    } else {
+      return dummyPosts;
+    }
+  };
+
+  const [Posts] = useState(getLocalData());
+
+
+
   //윈도우 전역객체에 있는 kakao키값을 바로 변수로 비구조화 할당
   const { kakao } = window;
   const info = [
@@ -89,6 +112,7 @@ function Location() {
       window.removeEventListener('resize', handleResize);
     }
 
+    localStorage.setItem('post', JSON.stringify(Posts));
 
     //버튼활성화
     // for (const btn of btns.current.children) btn.classList.remove("on");
@@ -97,11 +121,11 @@ function Location() {
 
   const visualImg = `${process.env.PUBLIC_URL}/img/visual_img1.jpg`;
 
-  const faqList = [
-    { txt: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit?' },
-    { txt: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit?' },
-    { txt: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit?' }
-  ]
+  // const faqList = [
+  //   { txt: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit?' },
+  //   { txt: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit?' },
+  //   { txt: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit?' }
+  // ]
   //const [Faq, setFaq] = useState(0);
 
   return (
@@ -167,16 +191,18 @@ function Location() {
           <div className="listWrap">
             <h3>Lorem ipsum dolor, sit amet consectetur.</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi ea esse itaque! Praesentium, dolorum architecto!</p>
-            {faqList.map((faq, idx) => {
-              return (
-                <article key={idx}>
-                  <h5>{faq.txt}</h5>
-                  <p>
-                    <FontAwesomeIcon icon={faPlusSquare} />
-                  </p>
-                </article>
+            {Posts.map((post, idx) => {
+              if (idx < 4) {
+                return (
+                  <article key={idx}>
+                    <h5>{post.content}</h5>
+                    <p>
+                      <FontAwesomeIcon icon={faPlusSquare} />
+                    </p>
+                  </article>
 
-              )
+                )
+              }
             })}
           </div>
         </div>

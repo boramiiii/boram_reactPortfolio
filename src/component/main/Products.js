@@ -24,12 +24,12 @@ function Products() {
   };
 
   const selectComponent = {
-    "false": <Fit />,
-    "true": <Buds />
+    "p1": <Fit />,
+    "p2": <Buds />
   }
 
   useEffect(() => {
-    setProductFit(false);
+    setProductFit('p1');
     // btn.current.classList.add("on");
 
   }, []);
@@ -41,9 +41,9 @@ function Products() {
         <div className='inner'>
           <ul className='btns' ref={btnOn}>
             <li className={`${Tab === 'fit' ? 'on' : ''}`}
-              onClick={() => { handleTab("false", "fit") }}>BEATS FIT PRO</li>
+              onClick={() => { handleTab("p1", "fit") }}>BEATS FIT PRO</li>
             <li className={`${Tab === 'buds' ? 'on' : ''}`}
-              onClick={() => { handleTab("true", "buds") }}>BEATS STUDIO BUDS</li>
+              onClick={() => { handleTab("p2", "buds") }}>BEATS STUDIO BUDS</li>
           </ul>
           <div className="listWrap">
             <div>{selectComponent[ProductFit]}</div>

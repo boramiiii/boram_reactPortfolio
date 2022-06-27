@@ -10,11 +10,16 @@ const Menu = forwardRef((props, ref) => {
     fontWeight: 'bold'
   };
 
-
   useImperativeHandle(ref, () => {
+    if (Open) {
+      document.body.style.overflow = 'hidden';
+    }
     return {
-      toggle: () => setOpen(!Open),
-    };
+      toggle: () => {
+        setOpen(!Open)
+        document.body.style.overflow = 'auto'
+      }
+    }
   });
 
   return (

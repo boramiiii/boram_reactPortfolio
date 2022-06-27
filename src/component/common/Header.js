@@ -1,11 +1,12 @@
 import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 import { faSignIn } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect, useRef } from 'react';
 import MobileMenu from './Menu';
 
 function Header() {
+  const [Tab, setTab] = useState(false);
   const menu = useRef(null);
   const style = {
     color: '#e64238',
@@ -21,6 +22,14 @@ function Header() {
     window.addEventListener('scroll', updateScroll);
     return () => window.removeEventListener('scroll', updateScroll);
   });
+
+  // useEffect(() => {
+  //   document.body.style.overflow = 'hidden';
+
+  //   return () => {
+  //     document.body.style.overflow = 'auto';
+  //   }
+  // }, [Tab])
 
   return (
     <>
@@ -71,7 +80,15 @@ function Header() {
               </NavLink>
             </li>
           </ul>
-          <FontAwesomeIcon icon={faBars} onClick={() => menu.current.toggle()} />
+          <div className="mMenu"
+            onClick={() => {
+              setTab(!Tab)
+              menu.current.toggle()
+            }}>
+            {Tab ? <FontAwesomeIcon icon={faClose} />
+              : <FontAwesomeIcon icon={faBars} />}
+          </div>
+          {/* <FontAwesomeIcon icon={faBars} onClick={() => menu.current.toggle()} /> */}
           {/* <FontAwesomeIcon icon={faBars} /> */}
         </div>
       </header >

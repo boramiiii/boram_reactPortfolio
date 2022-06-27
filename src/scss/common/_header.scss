@@ -81,14 +81,25 @@ header{
         }
       }
     }
-    .fa-bars {
+    .mMenu{
       position: absolute;
       bottom: 40px;
       right: 30px;
-      font-size: $fontXL;
-      color: #fff;
-      display: none;
+      z-index: 11;
+      .fa-bars {
+        font-size: $fontXL;
+        color: #fff;
+        display: none;
+        cursor: pointer;
+      }
+      .fa-xmark{
+        font-size: $fontXL;
+        color: #fff;
+        display: none;
+        cursor: pointer;
+      }
     }
+    
   }
 
   &.main{
@@ -121,7 +132,7 @@ header{
   
         h1{
           background-color: transparent;
-          width: 55vw;
+          width: 30vw;
         }
         p{
           display: none;
@@ -132,9 +143,23 @@ header{
         display: none;
 
       }
-      .fa-bars {
-        display: block;
+      .mMenu{
+        .fa-bars {
+          display: block;
+        }
+        .fa-xmark{
+          display: block;
+        }
       }
+      
+    }
+    &.main{
+    >.inner{
+      .logoWrap{
+        background-color: rgba(0,0,0,1);
+      }
+      
+    }
     }
   }
 
